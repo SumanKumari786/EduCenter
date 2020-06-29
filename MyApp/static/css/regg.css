@@ -1,0 +1,44 @@
+/*-----Background-----*/
+
+body{
+	 background-image: url("../assets/img/p9.jpeg");
+	 background-repeat:no-repeat;
+	 background-size:cover;
+	 width:100%;
+	 overflow:auto;
+
+}
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 110px;
+  max-width: 600px;
+  height: 450px;
+  border: 1px solid #9C9C9C;
+  font-family:Roboto,sans-serif;
+	  background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ;
+     box-shadow: 2px 5px 5px 0px #eee;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f4623a;
+}
+
+.btn.btn-primary:hover {
+    box-shadow: 2px 1px 2px 3px #99ccff;
+	background:#5900a6;
+	color:#fff;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
+
+}
+
+
+
+
+

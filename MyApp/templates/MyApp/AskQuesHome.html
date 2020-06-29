@@ -1,0 +1,40 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<style>
+
+    body{
+	 width:100%;
+
+	}
+
+</style>
+
+<section class="page-title-section " data-background="{%static 'images/courses/a1.jpg' %}">
+
+</section>
+
+<header>
+    <div class="container h-50">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+
+    </div>
+    <ul class="list-group">
+        <h2 class="panel-title mt-3">Available Questions</h2>
+        {% for question in ques %}
+            {% if question.status == True %}
+                <li class="list-group-item" style="text-align:left;">
+                    <strong >{{question.id}}. {{question.question}}</strong>
+                    <span class="pull-right" >
+                        <a href="{% url 'chooseans' question.id%}" class="btn btn-primary btn-xs" >ANSWER</a>
+                        <a href="{% url 'results' question.id%}" class="btn btn-success btn-xs">RESULTS</a>
+                    </span>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+        </div>
+</header>
+{% endblock %}

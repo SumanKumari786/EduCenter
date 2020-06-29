@@ -1,0 +1,214 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item "><a class="h3 text-primary font-secondary" href="#selectors"> Selectors</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#borders">Border</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#fonts">Fonts</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#tables">Tables</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#lists">Lists</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#forms">Forms</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+
+<!-- notice details -->
+<section class="section" id="selectors">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">CSS</span> Selectors
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+            </h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c3.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c4.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c5.png' %}" alt="course thumb">
+            <p>
+              We can divide CSS selectors into five categories:<br>
+              Simple selectors (select elements based on name, id, class) <br>
+              Combinator selectors (select elements based on a specific relationship between them)<br>
+              Pseudo-class selectors (select elements based on a certain state)<br>
+              Pseudo-elements selectors (select and style a part of an element)<br>
+              Attribute selectors (select elements based on an attribute or attribute value)
+
+            </p>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /notice details -->
+
+<section class="section" id="borders">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white">
+                <span class="h2 d-block">CSS</span> Borders
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">The CSS border properties allow you to specify the style, width, and color of an element's border.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c6.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c7.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c8.png' %}" alt="course thumb">
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="fonts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">CSS</span> Fonts
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">The CSS font properties define the font family, boldness, size, and the style of a text.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/c9.png' %}" alt="course thumb">
+            <p>
+              The font family of a text is set with the font-family property.
+              The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on.
+              Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+
+            </p>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ft.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ee.png' %}" alt="course thumb">
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tables">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">CSS</span> Tables
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">The look of an HTML table can be greatly improved with CSS:</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc1.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc2.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc3.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc4.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc5.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc6.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cc7.png' %}" alt="course thumb">
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="lists">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">CSS</span> Lists
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">Different List Item Markers</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/li.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/l1.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/l2.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/l3.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/l4.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/l5.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/l6.png' %}" alt="course thumb">
+
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="forms">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">CSS</span> Forms
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">The look of an HTML form can be greatly improved with CSS:</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/cf.png' %}" alt="course thumb">
+            <p>
+
+            </p>
+            <p>
+              input type="submit" defines a button for submitting the form data to a form-handler.
+              The form-handler is typically a page on the server with a script for processing input data.
+              The form-handler is specified in the form's action attribute.<br>
+              Form elements are different types of input elements, like: text fields, checkboxes, radio buttons, submit buttons, and more.
+            </p>
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/in.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/cf2.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/cf3.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/cf1.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/cf4.png' %}" alt="course thumb">
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

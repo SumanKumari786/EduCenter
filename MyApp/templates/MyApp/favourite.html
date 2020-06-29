@@ -1,0 +1,55 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% load humanize%}
+{% block content %}
+
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h1 text-primary font-secondary" href="#">FAVOURITE-BLOGS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- notice details -->
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            {% for post in favourite_posts %}
+            <div class="p-4 bg-primary text-white">
+                <span class="h2 d-block">At</span> {{post.date_posted|naturaltime}}
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">{{post.title}}</h3>
+            <div>
+              {{post.content| truncatechars:252 | safe}}
+            </div>
+            <a href="/MyApp/{{post.slug}}" class="btn btn-primary">Continue Reading</a>
+          </div>
+          {% empty %}
+            <div >
+                <h3>No Post In Your Favourite List</h3>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /notice details -->
+
+{% endblock %}

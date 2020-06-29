@@ -1,0 +1,203 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="/htmlcourse">BASICS OF HTML</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <!-- course thumb -->
+        <img src="{%static 'images/courses/html1.jpg' %}" class="img-fluid w-100">
+      </div>
+    </div>
+    <!-- course info -->
+    <div class="row align-items-center mb-5">
+      <div class="col-xl-3 order-1 col-sm-6 mb-4 mb-xl-0">
+        <h2>BASICS OF HTML</h2>
+      </div>
+      <div class="col-xl-6 order-sm-3 order-xl-2 col-12 order-2">
+        <ul class="list-inline text-xl-center">
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <i class="ti-book text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">COURSES</h6>
+                <p class="mb-0">HTML</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <i class="ti-alarm-clock text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">DURATION</h6>
+                <p class="mb-0">Unlimited</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <i class="ti-wallet text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">FEE</h6>
+                <p class="mb-0">FREE</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
+        <a href="/htmldetails" class="btn btn-primary">Full Course</a>
+      </div>
+      <!-- border -->
+      <div class="col-12 mt-4 order-4">
+        <div class="border-bottom border-primary"></div>
+      </div>
+    </div>
+    <!-- course details -->
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h3>HTML Introduction</h3>
+        <p>HTML is the standard markup language for creating Web pages.
+          HTML stands for Hyper Text Markup Language
+          HTML is the standard markup language for creating Web pages
+          HTML describes the structure of a Web page
+          HTML consists of a series of elements
+          HTML elements tell the browser how to display the content
+          HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+
+        </p>
+        <img class="card-img-top rounded-0" src="{%static 'images/courses/ex1.png' %}" alt="course thumb">
+
+      </div>
+      <div class="col-12 mb-4">
+        <h3 class="mb-3">Example Explained</h3>
+        <div class="col-12 px-0">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-styled">
+                <li>The !DOCTYPE html declaration defines that this document is an HTML5 document</li>
+                <li>The html element is the root element of an HTML page.</li>
+                <li>The head element contains meta information about the HTML page.</li>
+                <li>The title element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab).</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-styled">
+                <li>The body element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+               .</li>
+                <li>The h1 element defines a large heading.</li>
+                <li>The p element defines a paragraph.</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-4">
+        <h3 class="mb-3">NOTE</h3>
+        <ul class="list-styled">
+          <li>Some HTML elements have no content (like the <u>br</u> element). These elements are called empty elements.
+            Empty elements do not have an end tag!.</li>
+        </ul>
+      </div>
+      <div class="col-12 mb-5">
+        <h3>What is an HTML Element?</h3>
+        <p><img class="card-img-top rounded-0" src="{%static 'images/courses/ex2.png' %}" alt="course thumb"></p>
+      </div>
+      <!-- teacher -->
+      <div class="col-12">
+        <h5 class="mb-3">Teacher</h5>
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div class="media mb-2 mb-sm-0">
+            <i class="ti-user text-primary icon-md mr-2"></i>
+            <div class="media-body">
+              <h4 class="mt-0">ADMIN</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom border-primary mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section -->
+
+<!-- related course -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Related Course</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- course item -->
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{%static 'images/courses/css.png' %}" alt="course thumb">
+          <div class="card-body">
+            <a href="/csscourse">
+              <h4 class="card-title">CSS</h4>
+            </a>
+            <p class="card-text mb-4" style="text-align:justify;"> CSS is a language that describes the style of an HTML document.
+              CSS describes how HTML elements should be displayed.
+            </p>
+            <a href="/csscourse" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- course item -->
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{%static 'images/courses/jss.jpg' %}" alt="course thumb">
+          <div class="card-body">
+            <a href="/jscourse">
+              <h4 class="card-title">Java-Script</h4>
+            </a>
+            <p class="card-text mb-4"> JavaScript is the programming language of HTML.
+              JavaScript is easy to learn.
+              This tutorial will teach you  basics of JavaScript.</p>
+            <a href="/jscourse" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- course item -->
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{%static 'images/courses/boot.jpg' %}" alt="course thumb">
+          <div class="card-body">
+            <a href="/bootcourse">
+              <h4 class="card-title">BOOTSTRAP</h4>
+            </a>
+            <p class="card-text mb-4"> Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+            </p>
+            <a href="/bootcourse" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /related course -->
+
+
+
+{% endblock %}

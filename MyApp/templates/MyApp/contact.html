@@ -1,0 +1,40 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<section class="page-title-section" data-background="{%static 'images/courses/a1.jpg' %}">
+
+</section>
+
+<!-- contact -->
+<section class="section bg-gray my-5">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        {% for messages in messages %}
+        <h5>{{messages}}</h5>
+        {% endfor %}
+        <form method="post">
+          {% csrf_token %}
+          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" id="mail" name="email" placeholder="Your Email">
+          <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
+          <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <h1 class="mb-5"> We would love to hear from you !</h1>
+          <a href="tel:+8802057843248" class="text-color h5 d-block">+880 20 5784 3248</a>
+        <a href="mailto:yourmail@email.com" class="mb-5 text-color h5 d-block">loisuma16@email.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+
+{% endblock %}

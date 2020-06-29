@@ -1,0 +1,142 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+#body {
+   font-family: 'Baloo Thambi 2', cursive;
+   width: 100%;
+   height: 100vh;
+   color:#fff;
+   margin-top: 10px;
+}
+
+.login-form {
+   width: 32%;
+   position: absolute;
+   box-sizing: border-box;
+   padding: 40px;
+   margin-left: 25%;
+   margin-top: 20px;
+   transition: 0.5s;
+   background: #3B8590;
+   border-radius: 10px;
+   box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 599px){
+    .login-form
+    {
+       margin: 5% 0 0 8%;
+       width: 80%;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .login-form
+    {
+       margin: 5% 0 0 9%;
+       width: 70%;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .login-form
+    {
+       margin: 5% 0 0 8%;
+       width: 60%;
+    }
+}
+
+
+@media only screen and (min-width : 768px){
+    .login-form
+    {
+       margin: 5% 0 0 16%;
+       width: 60%;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .login-form
+    {
+       margin: 5% 0 0 17%;
+       width: 45%;
+    }
+}
+
+
+@media only screen and (min-width : 1024px){
+    .login-form
+    {
+       margin: 5% 0 0 29%;
+       width: 40%;
+    }
+}
+
+@media only screen and (min-width : 1350px){
+    .login-form
+    {
+       margin: 5% 0 0 26%;
+       width: 33%;
+    }
+}
+
+
+#head1 {
+   margin: 0 0 20px;
+   font-size: 35px;
+   text-align: center;
+   color: #d92338;
+   text-transform: uppercase;
+   font-family: 'Baloo Thambi 2', cursive;
+}
+
+.login-form input {
+   display: block;
+   width: 100%;
+   padding: 20px 20px;
+   box-sizing: border-box;
+   margin-bottom: 20px;
+   border-radius: 2px;
+   outline: none;
+   font-size: 18px;
+   color: fff;
+   border: none;
+   border-bottom: 1px solid #fff;
+   background: transparent;
+
+}
+
+.login-form input:hover {
+   border-bottom: 1px dotted #fff;
+}
+
+.login-form input[type="password"] {
+   color: #fff;}
+
+.login-form input[type="email"] {
+   color: #fff; }
+
+.login-form input::placeholder {
+   color: #fff;
+   font-size: 18px;
+   font-family: 'Lobster', cursive;
+}
+
+.login-form input[type="submit"] {
+   color: #fff;
+   font-family: 'Baloo Thambi 2', cursive;
+   font-size: 22px;
+   background: #d92338;
+   border: none;
+   cursor: pointer;
+   text-transform: uppercase;
+   font-weight: bold;
+   margin-top: 10%;
+}
+
+.login-form input[type="submit"]:hover {
+   background: #C64444;
+}
+

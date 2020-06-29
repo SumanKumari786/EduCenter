@@ -1,0 +1,77 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h1 text-primary font-secondary" href="/our-courses">OUR-COURSES</a></li>
+        </ul>
+        <p class="text-lighten">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- courses -->
+<section class="section">
+  <div class="container">
+    <!-- course list -->
+<div class="row justify-content-center">
+  <!-- course item -->
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{%static 'images/courses/html1.jpg' %}" alt="course thumb">
+      <div class="card-body">
+        <a href="/htmlcourse">
+          <h4 class="card-title">BASIC OF HTML</h4>
+        </a>
+        <p class="card-text mb-4"> HTML is the standard markup language for Web pages.
+          With HTML you can create your own Website. This tutorial follows the latest HTML5 standard.
+          HTML is easy to learn - You will enjoy it!
+        </p>
+        <a href="/htmlcourse" class="btn btn-primary btn-sm">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <!-- course item -->
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{%static 'images/courses/pyt.png' %}" alt="course thumb">
+      <div class="card-body">
+        <a href="/pycourse">
+          <h4 class="card-title">PYTHON</h4>
+        </a>
+        <p class="card-text mb-4"> Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+          It is used for:
+          web development (server-side) & Many Other Things</p>
+        <a href="/pycourse" class="btn btn-primary btn-sm">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <!-- course item -->
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{%static 'images/courses/djan.jpg' %}" alt="course thumb">
+      <div class="card-body">
+        <a href="/djancourse">
+          <h4 class="card-title">Django</h4>
+        </a>
+        <p class="card-text mb-4"> Django is a high-level Python Web framework that encourages
+          rapid development and clean, pragmatic design.
+          Built by experienced developers, it takes care of  Web development.</p>
+        <a href="/djancourse" class="btn btn-primary btn-sm">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </div>
+</section>
+<!-- /courses -->
+
+{% endblock %}

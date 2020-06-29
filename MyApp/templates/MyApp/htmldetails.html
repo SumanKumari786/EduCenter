@@ -1,0 +1,311 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item "><a class="h3 text-primary font-secondary" href="#headings"> Headings</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#paragraphs">Paragraphs</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#links">Hyperlinks</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#images">Images</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#tables">Tables</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#lists">Lists</a></li>
+          <li class="list-inline-item"><a class="h3 text-primary font-secondary" href="#forms">Forms</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+
+<!-- notice details -->
+<section class="section" id="headings">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">HTML</span> Headings
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">HTML headings are titles or subtitles that you want to display on a webpage.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ex3.png' %}" alt="course thumb">
+            <p>
+
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </p>
+            <p>
+              Headings Are Important
+              Search engines use the headings to index the structure and content of your web pages.
+
+              Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+            </p>
+              <ul class="list-styled mb-5">
+              <li>h1 headings should be used for main headings, followed by h2 headings,</li>
+              <li>then the less important h3, and so on.</li>
+              <li>Use HTML headings for headings only.</li>
+              <li>Don't use headings to make text BIG or bold.</li>
+            </ul>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /notice details -->
+
+<section class="section" id="paragraphs">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white">
+                <span class="h2 d-block">HTML</span> Paragraphs
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">A paragraph always starts on a new line, and is usually a block of text.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ex4.png' %}" alt="course thumb"><br/>
+            <p>
+              The HTML p element defines a paragraph.
+              A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
+
+            </p>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="links">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">HTML</span> Hyperlinks
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">Links are found in nearly all web pages. Links allow users to click their way from page to page.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ex5.png' %}" alt="course thumb">
+            <p>
+
+              <a href="/">Visit EduCenter!</a>
+            </p>
+            <p>
+              HTML links are hyperlinks. You can click on a link and jump to another document.
+              When you move the mouse over a link, the mouse arrow will turn into a little hand.
+              A link does not have to be text. A link can be an image or any other HTML element!
+
+            </p>
+              <ul class="list-styled mb-5">
+              <li>An unvisited link is underlined and blue.</li>
+              <li>A visited link is underlined and purple.</li>
+              <li>An active link is underlined and red.</li>
+            </ul>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="images">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">HTML</span> Images
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">Images can improve the design and the appearance of a web page.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ex6.png' %}" alt="course thumb">
+            <p>
+              The HTML img tag is used to embed an image in a web page.
+              Images are not technically inserted into a web page; images are linked to web pages.
+              The img tag creates a holding space for the referenced image.
+              The img tag is empty, it contains attributes only, and does not have a closing tag.
+              The img tag has two required attributes:
+
+
+            </p>
+              <ul class="list-styled mb-5">
+              <li>src - Specifies the path to the image.</li>
+              <li>alt - Specifies an alternate text for the image.</li>
+              <li>The width and height attributes always define the width and height of the image in pixels..</li>
+            </ul>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="tables">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">HTML</span> Tables
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">HTML tables allow web developers to arrange data into rows and columns.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ex7.png' %}" alt="course thumb">
+            <p>
+
+              <table border="1" style="width:100%">
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Age</th>
+                </tr>
+                <tr>
+                  <td>Jill</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                </tr>
+              </table>
+
+            </p>
+            <p>
+              To add a border to a table, use the CSS border property:<br>
+
+                Example<br>
+                table, th, td {<br>
+                  border: 1px solid black;<br>
+                }
+            </p>
+              <ul class="list-styled mb-5">
+              <li>The table tag defines an HTML table.</li>
+              <li>Each table row is defined with a tr tag.</li>
+              <li>Each table header is defined with a th tag. Each table data/cell is defined with a td tag.</li>
+              <li>By default, the text in th elements are bold and centered.</li>
+              <li>By default, the text in td elements are regular and left-aligned.</li>
+            </ul>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="lists">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">HTML</span> Lists
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">HTML lists allow web developers to group a set of related items in lists.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ol.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ul.png' %}" alt="course thumb">
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/dd.png' %}" alt="course thumb">
+              <ul class="list-styled mb-5">
+              <li> ul	Defines an unordered list</li>
+              <li> ol	Defines an ordered list</li>
+              <li>li	Defines a list item.</li>
+              <li>dl	Defines a description list.</li>
+              <li>dt	Defines a term in a description list.</li>
+              <li>dd	Describes the term in a description list.</li>
+            </ul>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="forms">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex">
+          <div class="text-center mr-4">
+            <div class="p-4 bg-primary text-white" >
+                <span class="h2 d-block">HTML</span> Forms
+            </div>
+          </div>
+          <!-- notice content -->
+          <div>
+            <h3 class="mb-4">An HTML form is used to collect user input. The user input can then be sent to a server for processing.</h3>
+            <img class="card-img-top rounded-0" src="{%static 'images/courses/ex8.png' %}" alt="course thumb">
+            <p>
+
+              <form action="/action_page.php">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+            </p>
+            <p>
+              input type="submit" defines a button for submitting the form data to a form-handler.
+              The form-handler is typically a page on the server with a script for processing input data.
+              The form-handler is specified in the form's action attribute.<br>
+              Form elements are different types of input elements, like: text fields, checkboxes, radio buttons, submit buttons, and more.
+            </p>
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/in.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/tx.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/lb.png' %}" alt="course thumb">
+             <img class="card-img-top rounded-0" src="{%static 'images/courses/gn.png' %}" alt="course thumb">
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<section class="page-title-section " data-background="{%static 'images/courses/a1.jpg' %}">
+
+</section>
+
+<section class="section bg-gray ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title">Register Here</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <form method="post">
+          {% csrf_token %}
+          <input type="text" class="form-control mb-3" id="name" name="fname" placeholder="First Name">
+          <input type="text" class="form-control mb-3" id="name1" name="lname" placeholder="Last Name">
+          <input type="text" class="form-control mb-3" id="name2" name="usname" placeholder="UserName">
+          <input type="email" class="form-control mb-3" id="nam" name="email" placeholder="Email">
+          <input type="password" class="form-control mb-3" id="mail" name="password1" placeholder="Password">
+          <input type="password" class="form-control mb-3" id="mail2" name="password2" placeholder="Password-Confirmation">
+          <button type="submit" value="send" class="btn btn-primary">SUBMIT</button>
+          <a class="btn btn-primary" href="/login">LOGIN</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

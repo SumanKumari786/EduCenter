@@ -1,0 +1,42 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h1 text-primary font-secondary" href="@@page-link">ABOUT-US</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- about -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <img class="img-fluid w-100 mb-4" src="{%static 'images/about/about.jpg' %}" alt="about image">
+        <h2 class="section-title">Know More</h2>
+        <p style="text-align:justify;">Educenter is a site where from students can learn different types of coding & basics of Programming Languages.
+            It is also updated by adding more new coding techniques which helps the students..
+        </p>
+        <p style="text-align:justify;" >Admin act as educators, guides to help individuals in daily life.
+          Educator can push their study material to this site. This is comman platform for students and teachers to interact.
+          Blogs system is the solution of the problem which students face in daily routine.
+        </p>
+        <p style="text-align:justify;">Educenter provides a common platform where technical people can share their experiences and information all over the globe people can discuss on any topic that is created by only the registered user. The user can give their advice on any topic or report. The admin after being logged in can create and also post any topic that is to be discussed. Admin can
+            also control the posts and the proceeding of the report and can view old comment history and post his own comments on topics.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+{% endblock %}

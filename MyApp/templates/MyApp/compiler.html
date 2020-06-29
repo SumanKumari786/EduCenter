@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ConnectGlobe OnlineCompiler</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"></script>
+</head>
+
+<style>
+
+    html, body{
+      margin:0;
+      padding:0;
+      height:100%;
+      width:100%;
+    }
+
+    #editor{
+      height:95%;
+      width:50%;
+      display:inline-block;
+      border:1px solid #fff;
+    }
+
+    #iframe{
+      height:95%;
+      width:50%;
+      display:inline-block;
+      border:1px solid #000;
+    }
+
+    #container{
+      height:100%;
+      width:auto;
+      white-space:nowrap;
+      overflow:hidden;
+
+    }
+
+    /* disable tag matching */
+    .ace_editor .ace_marker-layer .ace_bracket { display: none }
+
+    h1{color:#2e4ead;}
+
+</style>
+
+<body onload="ready()">
+<center><h1>Please Copy & Paste The code to see its Output</h1></center>
+<div id="container">
+
+    <div id="editor">
+
+    </div>
+    <iframe src="" frameborder="0" id="iframe"></iframe>
+</div>
+<script>
+function update()
+{
+	var idoc = document.getElementById('iframe').contentWindow.document;
+
+	idoc.open();
+	idoc.write(editor.getValue());
+	idoc.close();
+}
+
+function setupEditor()
+{
+  window.editor = ace.edit("editor");
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/html");
+  editor.setValue(`<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+</body>
+
+</html>`,1); //1 = moves cursor to end
+
+  editor.getSession().on('change', function() {
+    update();
+  });
+
+  editor.focus();
+
+
+  editor.setOptions({
+    fontSize: "16pt",
+    showLineNumbers: false,
+    showGutter: false,
+    vScrollBarAlwaysVisible:true,
+    enableBasicAutocompletion: false, enableLiveAutocompletion: false
+  });
+
+  editor.setShowPrintMargin(false);
+  editor.setBehavioursEnabled(false);
+}
+
+setupEditor();
+update();
+
+</script>
+</body>
+</html>

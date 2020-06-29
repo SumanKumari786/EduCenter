@@ -1,0 +1,32 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+<section class="page-title-section " data-background="{%static 'images/courses/a1.jpg' %}">
+
+</section>
+
+<section class="section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title">Login Here</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <form method="post">
+          {% csrf_token%}
+          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
+          <input type="password" class="form-control mb-3" id="mail" name="pass" placeholder="Your Password">
+          <button type="submit" value="send" class="btn btn-primary">SUBMIT</button>
+          <a class="btn btn-primary" href="/register">REGISTER</a>
+          <a class="btn btn-primary" href="{% url 'password_reset' %}">FORGET PASSWORD?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

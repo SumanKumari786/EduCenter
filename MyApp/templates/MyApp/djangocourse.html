@@ -1,0 +1,222 @@
+{% extends 'MyApp/index.html'%}
+{% load static%}
+{% block content %}
+
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="/djancourses">BASICS OF DJANGO</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <!-- course thumb -->
+        <img src="{%static 'images/courses/djan.jpg' %}" class="img-fluid w-100">
+      </div>
+    </div>
+    <!-- course info -->
+    <div class="row align-items-center mb-5">
+      <div class="col-xl-3 order-1 col-sm-6 mb-4 mb-xl-0">
+        <h2>BASICS OF DJANGO</h2>
+      </div>
+      <div class="col-xl-9 order-sm-3 order-xl-2 col-12 order-2">
+        <ul class="list-inline text-xl-center">
+          <li class="list-inline-item mr-2 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <div class="text-left">
+                <a href="#1" class="mb-0 h6">Architecture</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-2 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <div class="text-left">
+                <a href="#2" class="mb-0 h6">Create a Project</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-2 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <div class="text-left">
+                <a href="#3" class="mb-0 h6">Create an App</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- border -->
+      <div class="col-12 mt-4 order-4">
+        <div class="border-bottom border-primary"></div>
+      </div>
+    </div>
+    <!-- course details -->
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h3>Django Introduction</h3>
+          <p>Django is a Python-based web framework which allows you to quickly create web application without all of the installation or dependency problems that you normally will find with other frameworks.</p>
+          <p>When you’re building a website, you always need a similar set of components: a way to handle user authentication (signing up, signing in, signing out), a management panel for your website, forms, a way to upload files, etc. Django gives you ready-made components to use.</p>
+      </div>
+
+      <div class="col-12 mb-4">
+        <h3 class="mb-3">Why Django?</h3>
+        <ul class="list-styled">
+          <p>Django is a rapid web development framework that can be used to develop fully fleshed web applications in a short period of time.<br/>
+            It’s very easy to switch database in Django framework.<br/>
+            It has built-in admin interface which makes easy to work with it.<br/>
+            Django is fully functional framework that requires nothing else.<br/>
+            It has thousands of additional packages available.<br/>
+            It is very scalable.
+          </p>
+        </ul>
+        <h3 id="1" class="mb-3">Django architecture</h3>
+        <ul class="list-styled">
+          <p>Django is based on MVT (Model-View-Template) architecture.
+              MVT is a software design pattern for developing a web application.<br>
+              MVT Structure has the following three parts-<br>
+            <p><b>Model:</b> Model is going to act as the interface of your data. It is responsible for maintaining data. It is the logical data structure behind the entire application and is represented by a database (generally relational databases such as MySql, Postgres).</p>
+            <p><b>View:</b> The View is the user interface — what you see in your browser when you render a website. It is represented by HTML/CSS/Javascript and Jinja files.</p>
+            <p><b>Template:</b> A template consists of static parts of the desired HTML output as well as some special syntax describing how dynamic content will be inserted.</p>
+          </p>
+        </ul>
+        <h3 id="2" class="mb-3">Creating a project</h3>
+        <ul class="list-styled">
+            <p>If this is your first time using Django, you’ll have to take care of some initial setup. Namely, you’ll need to auto-generate some code that establishes a Django project – a collection of settings for an instance of Django, including database configuration, Django-specific options and application-specific settings.
+                From the command line, cd into a directory where you’d like to store your code, then run the following command:</p>
+            <p><b>$ django-admin startproject mysite</b></p>
+            <p>This will create a mysite directory in your current directory.</p>
+        </ul>
+          <h3 class="mb-3">Let’s look at what startproject created:</h3>
+
+        <ul class="list-styled">
+          <li>mysite/<br>
+                manage.py</li>
+          <li>mysite/<br>
+            __init__.py<br>
+            settings.py<br>
+            urls.py<br>
+            asgi.py<br>
+            wsgi.py
+          </li>
+        </ul>
+        <h3 class="mb-3">These files are:</h3>
+        <p class="list-styled">
+            <p>
+                The outer mysite/ root directory is a container for your project. Its name doesn’t matter to Django; you can rename it to anything you like.
+            </p>
+            <li><b>manage.py:</b> A command-line utility that lets you interact with this Django project in various ways. You can read all the details about manage.py in django-admin and manage.py.</li><br/>
+            <p>The inner mysite/ directory is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. mysite.urls).</p>
+            <li><b>mysite/__init__.py:</b> An empty file that tells Python that this directory should be considered a Python package. If you’re a Python beginner, read more about packages in the official Python docs.</li>
+            <li><b>mysite/settings.py:</b> Settings/configuration for this Django project. Django settings will tell you all about how settings work.</li>
+            <li><b>mysite/urls.py:</b> The URL declarations for this Django project; a “table of contents” of your Django-powered site. You can read more about URLs in URL dispatcher.</li>
+            <li><b>mysite/asgi.py:</b> An entry-point for ASGI-compatible web servers to serve your project. See How to deploy with ASGI for more details.</li>
+            <li><b>mysite/wsgi.py:</b> An entry-point for WSGI-compatible web servers to serve your project. See How to deploy with WSGI for more details.</li>
+        </ul><br><br>
+        <h3 id="3" class="mb-3">Creating a App</h3>
+        <ul class="list-styled">
+            <p><b>$ python manage.py startapp polls</b></p>
+        </ul>
+          <h3 class="mb-3">That’ll create a directory polls, which is laid out like this:</h3>
+
+        <ul class="list-styled">
+          <li>polls/<br/>
+              admin.py <br/>
+              apps.py<br/>
+              migrations/<br/>
+            __init__.py<br/>
+            models.py<br/>
+            tests.py<br/>
+            views.py
+          </li>
+        </ul>
+      </div>
+      <!-- teacher -->
+      <div class="col-12">
+        <h5 class="mb-3">Teacher</h5>
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div class="media mb-2 mb-sm-0">
+            <i class="ti-user text-primary icon-md mr-2"></i>
+            <div class="media-body">
+              <h4 class="mt-0">ADMIN</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom border-primary mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section -->
+
+<!-- related course -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Related Course</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- course item -->
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{%static 'images/courses/html1.jpg' %}" alt="course thumb">
+          <div class="card-body">
+            <a href="/htmlcourse">
+              <h4 class="card-title">HTML</h4>
+            </a>
+            <p class="card-text mb-4" style="text-align:justify;"> HTML is a language for creating Web pages.
+          HTML stands for HyperText Markup Language
+          HTML is used for creating Web-designs.
+            </p>
+            <a href="/htmlcourse" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- course item -->
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{%static 'images/courses/jss.jpg' %}" alt="course thumb">
+          <div class="card-body">
+            <a href="/jscourse">
+              <h4 class="card-title">JAVA-SCRIPT</h4>
+            </a>
+            <p class="card-text mb-4"> JavaScript is the programming language of HTML.
+              JavaScript is easy to learn.
+              This tutorial will teach you  basics of JavaScript.</p>
+            <a href="/jscourse" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- course item -->
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{%static 'images/courses/boot.jpg' %}" alt="course thumb">
+          <div class="card-body">
+            <a href="/bootcourse">
+              <h4 class="card-title">BOOTSTRAP</h4>
+            </a>
+            <p class="card-text mb-4"> Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+            </p>
+            <a href="/bootcourse" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /related course -->
+
+{% endblock %}

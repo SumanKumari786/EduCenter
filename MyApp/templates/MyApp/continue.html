@@ -1,0 +1,123 @@
+{% extends 'MyApp/index.html'%}
+{% load crispy_forms_tags %}
+{% load static%}
+{% load humanize%}
+{% load static%}
+{% block content %}
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="{%static 'images/courses/a1.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="blog.html">COMPLETE BLOG</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- blog details -->
+<section class="section-sm bg-gray">
+  <div class="container">
+    <div class="row">
+      <!-- blog contect -->
+      <div class="col-12 mb-5">
+        <div class="row">
+        <h2 class="col-8">{{post.title}} </h2>
+        <h2 class="col-2">{{post.category}}</h2>
+        </div>
+      </div>
+      <div class="col-12 mb-5">
+        <div class="row">
+          <div class="col-3 mb-4">
+          {% if post.file %}
+             <img src="{{post.file.url}}" class="rounded-circle img-fluid z-depth-1" alt="woman avatar">
+          {% endif%}
+          </div>
+          <div class="col-9 mb-4">
+            {{post.content | safe}}
+          </div>
+      </div>
+        <blockquote class="blockquote">
+          <footer class="blockquote-footer h4">by <cite title="Source Title">{{post.name|capfirst}} ({{post.date_posted|naturaltime}})</cite></footer>
+      </blockquote><br/>
+      </div>
+
+        {% if is_favourite %}
+            <a href="{% url 'favourite_post' post.id%}"><i class="fas fa-heart h2 mx-3"></i></a>
+        {% else %}
+            <a href="{% url 'favourite_post' post.id %}"><i class="far fa-heart h2 mx-3"></i></a>
+        {% endif %}
+        {% if post.category == 'HTML/CSS/Bootstrap-Coding' %}
+            <a href="/compiler" class="btn btn-primary" target="_blank" >Try Yourself</a>
+        {% endif%}
+
+        <div class="fb-like" data-href="http://127.0.0.1:8000//MyApp/{{post.slug}}" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+
+      <!-- comment box -->
+      <div class="col-12">
+        <h2 >Post Comment</h2>
+        <form method="post" class="row">
+          {% csrf_token %}
+          <div class="col-12">
+            {{commentform|crispy }}
+          </div>
+          <div class="col-12">
+            {% if request.user.is_authenticated %}
+                <input type="submit" value="submit" class="btn btn-primary">
+            {% else %}
+                <h3>You must be logged in to post a comment!</h3>
+            {% endif %}
+          </div>
+        </form>
+        <h2>Comments({{comments.count}})</h2>
+        {% for comment in comments %}
+        <blockquote class="blockquote">
+            <h4 class="mb-0">{{comment.comment}}</h4>
+            <footer class="blockquote-footer h5">by <cite title="Source Title">{{comment.user|capfirst}} ({{comment.timestamp|naturaltime}})</cite></footer>
+
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{ comment.sno }}" aria-expanded="false" aria-controls="collapseExample{{ comment.sno }}">
+              Reply
+            </button><br>
+
+            <div class="collapse" id="collapseExample{{ comment.sno }}">
+              {% for reply in comment.replies.all %}
+                <blockquote class="blockquote ml-5 mt-4">
+                    <h4 class="mb-0">{{reply.comment}}</h4>
+                    <footer class="blockquote-footer h5">by <cite title="Source Title">{{reply.user|capfirst}} ({{reply.timestamp|naturaltime}})</cite></footer>
+                </blockquote>
+                {% endfor %}
+              <div class="card card-body">
+
+                  <div class="replied-comments  mt-2">
+
+                    <div class="form-group-row">
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="comment_sno" value="{{ comment.sno }}">
+                            {{commentform|crispy }}
+
+                            {% if request.user.is_authenticated %}
+                                <input type="submit" value="Submit" class="btn btn-success">
+                            {% else %}
+                                <h3 >Login Required To Post A Comment</h3>
+                            {% endif %}
+                        </form>
+                    </div>
+                  </div>
+
+                  </div>
+                </div>
+        </blockquote>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /blog details -->
+
+{% endblock %}

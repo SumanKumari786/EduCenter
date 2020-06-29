@@ -1,0 +1,71 @@
+
+{% extends 'MyApp/index.html'%}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view profile</title>
+</head>
+
+<style>
+
+ body{
+		background-image: url(http://getwallpapers.com/wallpaper/small-retina/a/1/2/110905.jpg#.XuCjtQebJIQ.link);
+	 background-repeat:no-repeat;
+	 background-size:cover;
+	 width:100%;
+
+	}
+
+img {
+   margin-top:1%;
+   cursor: pointer;
+   box-shadow: 5px 10px 15px rgba(0, 0, 0,0.1);
+}
+
+h2{margin-top:6%; }
+
+</style>
+<body >
+<section class="page-title-section " data-background="{%static 'images/courses/a1.jpg' %}">
+
+</section>
+
+<div class="container py-5 my-2">
+  <section class="p-md-5 mx-md-5 text-center text-lg-left  z-depth-1 ">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10">
+          <center><h2>Hello! {{request.user.username}}</h2><br></center>
+        <div class="card">
+          <div class="card-body m-3">
+            <div class="row">
+              <div class="col-lg-4 d-flex mb-2 align-items-center">
+                <div class="avatar mx-4 w-100 white d-flex justify-content-center align-items-center">
+                    {% if request.user.myprofile.image%}
+                  <img src="{{request.user.myprofile.image.url}}" class="rounded-circle img-fluid z-depth-1" alt="woman avatar">
+                    {% endif %}
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <p class="text-muted font-weight-light mb-4"><i class="fas fa-map-marker"></i> {{request.user.myprofile.city}}, {{request.user.myprofile.state}}</p>
+                <p class="font-weight-bold lead mb-2"><strong><i class="fas fa-envelope"></i> {{request.user.email}}</strong></p>
+                <p class="font-weight-bold lead mb-2"><strong><i class="fas fa-gift"></i> {{request.user.myprofile.birth_date}}</strong></p>
+                <p class="font-weight-bold lead mb-2"><strong><i class="fas fa-map"></i> {{request.user.myprofile.description}}</strong></p>
+              	<p class="font-weight-bold text-muted mb-0"><i class="fas fa-phone"></i> {{request.user.myprofile.phone_number}}</p><br/>
+                <a href="/update_profile" class="btn btn-primary">UPDATE PROFILE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+</body>
+</html>
+{% endblock %}
+
